@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <div id="full"></div>
+    <script>
+        const person = {
+            firstName: "Joshua",
+            lastName: "Mbawini",
+            age: 30,
+            fullName() {
+                return this.firstName
+            }
+        }
+        let demo = document.getElementById("demo");
+
+        demo.innerHTML = person.firstName + " " + person.lastName + " is " + person.age + " years old "
+        document.getElementById('full').textContent = "My full name is " + person.fullName();
+    </script>
+</body>
+</html>
